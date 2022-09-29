@@ -8,7 +8,7 @@ package com.Lab;
 
 public class DivisibleBy3And5 {
   public static void main(String[] args) {
-	  System.out.println("Numbers which are ontly divisible by 3");
+	  System.out.println("Numbers which are only divisible by 3");
 	for(int i=1;i<=100;i++) {
 		if(i%3==0) {    
 			System.out.print(i+",");

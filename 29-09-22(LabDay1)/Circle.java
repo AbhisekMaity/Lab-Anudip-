@@ -12,7 +12,7 @@ public class Circle {
 
   Circle(float radius,float pi){
 	  this.radius=radius;
-	  this.pi=pi;
+	  this.pi=3.14f;
   }
   public double calculateCircleArea(float radius) {
 	  return pi*radius*radius;

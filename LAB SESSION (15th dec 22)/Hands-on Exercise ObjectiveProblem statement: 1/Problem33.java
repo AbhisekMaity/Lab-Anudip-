@@ -1,4 +1,4 @@
-package Lab;
+package com.Lab;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package Lab;
+package com.Lab;
 
 import java.util.HashSet;
 import java.util.Iterator;

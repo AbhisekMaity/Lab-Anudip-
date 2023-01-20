@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/data/jpa
+ https://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+ 
+ <bean id = "X" class="com.spring.entity.Student">
+ <constructor-arg name="id" value="101"/>
+  <constructor-arg name="name" value="Abhisek"/>
+  <constructor-arg name="email" value="abhisekmaity12@gmail.com"/>
+  <constructor-arg name="phone" value="8768273510"/>
+ 
+ </bean>
+ 
+ <bean id ="p" class="com.spring.entity.Person">
+<property name="name" value="Abhisek"></property>
+ </bean>
+ 
+ <bean id = "e" class="com.spring.entity.Employee">
+ <constructor-arg type="int" value="10"/>
+ <constructor-arg type ="String" value="Abhisek"></constructor-arg>
+ </bean>
+ 
+ <bean id ="a" class="com.spring.entity.Address">
+ <constructor-arg  value="Kolkata"/>
+  <constructor-arg  value="WB"/>
+  <constructor-arg  value="India"/>
+ 
+ </bean>
+ <bean id ="e1" class="com.spring.entity.Emp1">
+ <constructor-arg value="202"/>
+ <constructor-arg  value="Abhisek"/>
+ <constructor-arg> <ref bean="a"/></constructor-arg>
+ </bean>
+ 
+ <bean id ="mcq" class="com.spring.entity.Mcq">
+ <constructor-arg value="010"/>
+  <constructor-arg  value="DefineSpring"/>
+  <constructor-arg>
+  
+  <list>
+  <value>Spring is a frame work</value>
+  <value>Spring is collection</value>
+  <value>Spring is a list</value>
+  </list>
+  
+  
+  </constructor-arg>
+ 
+ </bean>
+ 
+ <!-- ===========================================================================
+  -->
+ <bean id="d" class="com.spring.entity.DoubleValue">
+ <constructor-arg name="dbval" value="98.3" ></constructor-arg>
+ </bean>
+ <!-- ================================================================================ -->
+ <bean id="obj" class="com.spring.entity.DependentObject">
+ <constructor-arg name ="id" value="20"/>
+ <constructor-arg name ="name" value="Abhisek"/>
+ <constructor-arg name ="department" value="MCA"/>
+ </bean>
+ 
+ <bean id="dpd" class="com.spring.entity.Dependent">
+ <constructor-arg><ref bean="obj" /> </constructor-arg>
+ </bean>
+ 
+<!--  =============================================================================================
+ --> 
+ 
+ <bean id="ceg" class="com.spring.entity.CollectionEg">
+ <constructor-arg name="name" value="Abhisek"/>
+ <constructor-arg>
+ <list>
+ <value>Music</value>
+ <value>Practice Typing</value>
+ <value>Browsing</value>
+ </list>
+ 
+  </constructor-arg>
+
+ </bean>
+ <!-- Now we can work with getter and setter that means property  -->
+ <bean id="e11" class="com.spring.entity.Employee1">
+ <property name="id" value="101"/>
+ <property name="name" value="Rohit"/>
+ <property name="city" value="kolkata"/>
+ 
+ 
+ 
+ 
+ </bean>
+ 
+ <bean id="add" class="com.spring.entity.Address2">
+ <property name="city" value="Tamluk"/>
+ <property name="state" value="wb"/>
+ <property name="country" value="India"/>
+ </bean>
+ 
+ <bean id="e2" class="com.spring.entity.Emp2">
+ <property name="id" value="123"/>
+ <property name="ename" value="Ronit"/>
+ <property name="address" ref="add"/>
+ </bean>
+ 
+ <bean id="mcqqus" class="com.spring.entity.McqQuestions">
+ 
+ <property name="id" value="101"/>
+ <property name="name" value="Sayani"/>
+ <property name="ans">
+ <map>
+ <entry key="What is java ?" value="Opps language"></entry>
+  <entry key="What is c ?" value="Procedural programming language"></entry>
+ 
+ </map>
+ </property>
+ 
+ </bean>
+ 
+ 
+ </beans>
